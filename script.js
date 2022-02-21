@@ -1,17 +1,8 @@
-// import { list } from "./picsPath.js";
-
-// const picContainer = document.getElementById("pic-list");
-// for(let i = 0; i < list.length; i++){
-//     const img = document.createElement("img");
-//     img.src = list[i];
-//     picContainer.appendChild(img);
-// }
-
 const choseItem = document.querySelector(".items");
 const chosePic = document.querySelectorAll(".gallery .pics");
 
 chosePic.forEach((x) => {
-        if(!x.classList.contains("100")){
+        if(!x.classList.contains("laptop")){
             x.classList.add("hide");
         }
 
@@ -26,10 +17,10 @@ choseItem.addEventListener("click", (event)=> {
         choseItem.querySelector(".active").classList.remove("active");
         event.target.classList.add("active");
         // console.log(event.target);
-        const days = event.target.getAttribute("days");
-        // console.log(days);
+        const options = event.target.getAttribute("options");
+        // console.log(options);
         chosePic.forEach((x) => {
-            if(x.classList.contains(days)){
+            if(x.classList.contains(options)){
                 x.classList.remove("hide");
                 x.classList.add("show");
             }

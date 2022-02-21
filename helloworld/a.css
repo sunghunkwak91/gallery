@@ -1,0 +1,15 @@
+body{
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+}
+
+.b {
+    transform: translateX(0%);
+    transition: transform .7s ease-in-out;
+}
+
+.b.move{
+    transform:translateX(-110%);
+    transition: transform .7s ease-in-out;
+}
